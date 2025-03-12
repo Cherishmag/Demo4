@@ -15,7 +15,7 @@ import java.util.Map;
 	aliasName = "${lambdas_alias_name}",
 	logsExpiration = RetentionSetting.SYNDICATE_ALIASES_SPECIFIED
 )
-public class HelloWorld implements RequestHandler<Object, APIGatewayProxyResponseEvent>  {
+public class HelloWorld implements RequestHandler<Object, APIGatewayProxyResponseEvent> {
 	@Override
 	public APIGatewayProxyResponseEvent handleRequest(Object input, Context context) {
 		APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent()
@@ -23,5 +23,7 @@ public class HelloWorld implements RequestHandler<Object, APIGatewayProxyRespons
 				.withBody("{\"statusCode\":200, \"message\": \"Hello from Lambda\"}");
 		return response;
 	}
+}
+
 
 
